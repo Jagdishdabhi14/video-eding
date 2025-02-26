@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: rgb(2, 3, 27);
+        }
+        h1 {
+            margin-top: 20px;
+            color: white;
+        }
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+        .gallery-item {
+            width: 250px;
+            cursor: pointer;
+        }
+        .gallery-item img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+        /* Lightbox (Full-Size Image) */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+        .lightbox:target {
+            display: flex;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Photo Editing works</h1>
+    
+    <div class="gallery-container">
+        <a href="#photo1" class="gallery-item">
+            <img src="editedphoto.jpg" alt="photo1">
+        </a>
+        <a href="#photo2" class="gallery-item">
+            <img src="photo2.jpg" alt="Photo 2">
+        </a>
+        <a href="#photo3" class="gallery-item">
+            <img src="photo3.jpg" alt="Photo 3">
+        </a>
+    </div>
+
+    <!-- Lightbox Full View -->
+    <div id="photo1" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="editedphoto.jpg" alt="Photo 1">
+    </div>
+
+    <div id="photo2" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="photo2.jpg" alt="Photo 2">
+    </div>
+
+    <div id="photo3" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="photo3.jpg" alt="Photo 3">
+    </div>
+
+</body>
+</html>
