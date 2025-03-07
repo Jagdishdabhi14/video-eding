@@ -144,3 +144,17 @@ p{
         display: block !important;
     }
 }
+
+/* comments text box css */
+.comment-box {
+    background: rgb(2, 3, 27);;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-family: Montserrat;
+}
+.comment-box strong {
+    color: rgb(255, 255, 255);
+}
+
